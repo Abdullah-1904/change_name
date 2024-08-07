@@ -8,9 +8,15 @@ import Home from "./pages/home/home";
 import Login from "./pages/login/login";
 import Signup from "./pages/signup/signup";
 import Task from "./pages/task/task";
+import Dashboard from "./pages/dashboard/dashboard";
 
 // in the homepage, this will be child of dashboard in the outlet in home.jsx
-const Dashboard = () => <div>Dashboard Content</div>;
+// const Dashboard = () => <div>Dashboard Content</div>;
+// const Task = () => (
+//   <div>
+//     <Task />
+//   </div>
+// );
 
 const router = createBrowserRouter([
   {

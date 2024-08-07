@@ -42,14 +42,14 @@ const Home = () => {
             <NavLink
               to="dashboard"
               className={({ isActive }) =>
-                `flex flex-row mb-8 ${
+                `flex flex-row mb-4 ${
                   isActive
                     ? "bg-lime-300 font-bold rounded-s-3xl ml-6  pt-3"
                     : ""
                 }`
               }
             >
-              <div className="flex flex-row mb-8">
+              <div className="flex flex-row mb-4">
                 <h1 className="mx-3">
                   <Gauge />
                 </h1>
@@ -59,25 +59,25 @@ const Home = () => {
             <NavLink
               to="task"
               className={({ isActive }) =>
-                `flex flex-row mb-8 ${
+                `flex flex-row mb-4 ${
                   isActive
                     ? "bg-lime-300 font-bold rounded-s-3xl ml-6 pt-3"
                     : ""
                 }`
               }
             >
-              <div className="flex flex-row mb-8">
+              <div className="flex flex-row mb-4">
                 <h1 className="mx-3">
                   <LayoutList />
                 </h1>
                 <h1>Task</h1>
               </div>
             </NavLink>
-            <div className="flex flex-row mb-8">
+            <div className="flex flex-row mb-4">
               <NavLink
                 to="xx"
                 className={({ isActive }) =>
-                  `flex flex-row mb-8 ${
+                  `flex flex-row mb-4 ${
                     isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
@@ -88,11 +88,11 @@ const Home = () => {
                 <h1>Farm locations</h1>
               </NavLink>
             </div>
-            <div className="flex flex-row mb-8">
+            <div className="flex flex-row mb-4">
               <NavLink
                 to="xx"
                 className={({ isActive }) =>
-                  `flex flex-row mb-8 ${
+                  `flex flex-row mb-4 ${
                     isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
@@ -103,11 +103,11 @@ const Home = () => {
                 <h1>Planting</h1>
               </NavLink>
             </div>
-            <div className="flex flex-row mb-8">
+            <div className="flex flex-row mb-4">
               <NavLink
                 to="xx"
                 className={({ isActive }) =>
-                  `flex flex-row mb-8 ${
+                  `flex flex-row mb-4 ${
                     isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
@@ -118,11 +118,11 @@ const Home = () => {
                 <h1>Warehouse</h1>
               </NavLink>
             </div>
-            <div className="flex flex-row mb-8">
+            <div className="flex flex-row mb-4">
               <NavLink
                 to="xx"
                 className={({ isActive }) =>
-                  `flex flex-row mb-8 ${
+                  `flex flex-row mb-4 ${
                     isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
@@ -133,11 +133,11 @@ const Home = () => {
                 <h1>LiveStock</h1>
               </NavLink>
             </div>
-            <div className="flex flex-row mb-8">
+            <div className="flex flex-row mb-4">
               <NavLink
                 to="xx"
                 className={({ isActive }) =>
-                  `flex flex-row mb-8 ${
+                  `flex flex-row mb-4 ${
                     isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
@@ -148,11 +148,11 @@ const Home = () => {
                 <h1>Inventory</h1>
               </NavLink>
             </div>
-            <div className="flex flex-row mb-8">
+            <div className="flex flex-row mb-4">
               <NavLink
                 to="xx"
                 className={({ isActive }) =>
-                  `flex flex-row mb-8 ${
+                  `flex flex-row mb-4 ${
                     isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
@@ -163,11 +163,11 @@ const Home = () => {
                 <h1>Contact</h1>
               </NavLink>
             </div>
-            <div className="flex flex-row mb-8">
+            <div className="flex flex-row mb-4">
               <NavLink
                 to="xx"
                 className={({ isActive }) =>
-                  `flex flex-row mb-8 ${
+                  `flex flex-row mb-4 ${
                     isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
@@ -178,21 +178,19 @@ const Home = () => {
                 <h1>Financials</h1>
               </NavLink>
             </div>
-            <div className="flex flex-row mb-8">
-              <NavLink
-                to="xx"
-                className={({ isActive }) =>
-                  ` ${
-                    isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
-                  }`
-                }
-              >
+            <NavLink
+              to="xx"
+              className={({ isActive }) =>
+                ` ${isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""}`
+              }
+            >
+              <div className="flex flex-row mb-8">
                 <h1 className="mx-3">
                   <UserRoundPenIcon />
                 </h1>
                 <h1>Manage Users</h1>
-              </NavLink>
-            </div>
+              </div>
+            </NavLink>
           </div>
         </div>
         <div className="ml-2">
