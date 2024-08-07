@@ -20,59 +20,65 @@ const Home = () => {
       <div className="flex justify">
         {" "}
         {/* this will make gap between sidebar and other content */}
-        <div className="w-1/5 bg-red-50 mt-1">
+        <div className="lg:w-1/5 bg-slate-50 mt-1 ">
           <div className="flex flex-row mb-5">
             <div className="flex justify-between ">
               <img className="w-16" src="crop.png" alt="" />
               <div className="flex flex-col ">
-                <label htmlFor="" className="text-xl">
-                  {" "}
-                  FARM MANAGEMENT
-                </label>
-                <label htmlFor="" className="">
-                  {" "}
-                  System
-                </label>
+                <NavLink to={"/home"}>
+                  <label htmlFor="" className="text-xl">
+                    {" "}
+                    FARM MANAGEMENT
+                  </label>
+                  <label htmlFor="" className="">
+                    {" "}
+                    System
+                  </label>
+                </NavLink>
               </div>
             </div>
           </div>
           <div>
-            <div className="flex flex-row mb-8">
-              <NavLink
-                to="dashboard"
-                className={({ isActive }) =>
-                  `flex flex-row mb-8 ${
-                    isActive ? "bg-gray-200 font-bold" : ""
-                  }`
-                }
-              >
+            <NavLink
+              to="dashboard"
+              className={({ isActive }) =>
+                `flex flex-row mb-8 ${
+                  isActive
+                    ? "bg-lime-300 font-bold rounded-s-3xl ml-6  pt-3"
+                    : ""
+                }`
+              }
+            >
+              <div className="flex flex-row mb-8">
                 <h1 className="mx-3">
                   <Gauge />
                 </h1>
                 <h1>Dashboard</h1>
-              </NavLink>
-            </div>
-            <div className="flex flex-row mb-8">
-              <NavLink
-                to="/dashboard"
-                className={({ isActive }) =>
-                  `flex flex-row mb-8 ${
-                    isActive ? "bg-gray-200 font-bold" : ""
-                  }`
-                }
-              >
+              </div>
+            </NavLink>
+            <NavLink
+              to="task"
+              className={({ isActive }) =>
+                `flex flex-row mb-8 ${
+                  isActive
+                    ? "bg-lime-300 font-bold rounded-s-3xl ml-6 pt-3"
+                    : ""
+                }`
+              }
+            >
+              <div className="flex flex-row mb-8">
                 <h1 className="mx-3">
                   <LayoutList />
                 </h1>
                 <h1>Task</h1>
-              </NavLink>
-            </div>
+              </div>
+            </NavLink>
             <div className="flex flex-row mb-8">
               <NavLink
-                to="/dashboard"
+                to="xx"
                 className={({ isActive }) =>
                   `flex flex-row mb-8 ${
-                    isActive ? "bg-gray-200 font-bold" : ""
+                    isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
               >
@@ -84,10 +90,10 @@ const Home = () => {
             </div>
             <div className="flex flex-row mb-8">
               <NavLink
-                to="/dashboard"
+                to="xx"
                 className={({ isActive }) =>
                   `flex flex-row mb-8 ${
-                    isActive ? "bg-gray-200 font-bold" : ""
+                    isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
               >
@@ -99,10 +105,10 @@ const Home = () => {
             </div>
             <div className="flex flex-row mb-8">
               <NavLink
-                to="/dashboard"
+                to="xx"
                 className={({ isActive }) =>
                   `flex flex-row mb-8 ${
-                    isActive ? "bg-gray-200 font-bold" : ""
+                    isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
               >
@@ -114,10 +120,10 @@ const Home = () => {
             </div>
             <div className="flex flex-row mb-8">
               <NavLink
-                to="/dashboard"
+                to="xx"
                 className={({ isActive }) =>
                   `flex flex-row mb-8 ${
-                    isActive ? "bg-gray-200 font-bold" : ""
+                    isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
               >
@@ -129,10 +135,10 @@ const Home = () => {
             </div>
             <div className="flex flex-row mb-8">
               <NavLink
-                to="/dashboard"
+                to="xx"
                 className={({ isActive }) =>
                   `flex flex-row mb-8 ${
-                    isActive ? "bg-gray-200 font-bold" : ""
+                    isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
               >
@@ -144,10 +150,10 @@ const Home = () => {
             </div>
             <div className="flex flex-row mb-8">
               <NavLink
-                to="/dashboard"
+                to="xx"
                 className={({ isActive }) =>
                   `flex flex-row mb-8 ${
-                    isActive ? "bg-gray-200 font-bold" : ""
+                    isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
               >
@@ -159,10 +165,10 @@ const Home = () => {
             </div>
             <div className="flex flex-row mb-8">
               <NavLink
-                to="/dashboard"
+                to="xx"
                 className={({ isActive }) =>
                   `flex flex-row mb-8 ${
-                    isActive ? "bg-gray-200 font-bold" : ""
+                    isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
               >
@@ -174,10 +180,10 @@ const Home = () => {
             </div>
             <div className="flex flex-row mb-8">
               <NavLink
-                to="/dashboard"
+                to="xx"
                 className={({ isActive }) =>
-                  `flex flex-row mb-8 ${
-                    isActive ? "bg-gray-200 font-bold" : ""
+                  ` ${
+                    isActive ? "bg-lime-300 font-bold rounded-s-3xl ml-6" : ""
                   }`
                 }
               >

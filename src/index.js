@@ -7,6 +7,7 @@ import Error from "./pages/error/error";
 import Home from "./pages/home/home";
 import Login from "./pages/login/login";
 import Signup from "./pages/signup/signup";
+import Task from "./pages/task/task";
 
 // in the homepage, this will be child of dashboard in the outlet in home.jsx
 const Dashboard = () => <div>Dashboard Content</div>;
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
           // i have not written /dashboard as this will link to another page, dashboard means that inside
           // /home there is another / that could be dashboard or other
           { path: "dashboard", element: <Dashboard /> },
-          // { path: "dashboard", element: <Dashboard /> }
+          { path: "task", element: <Task /> },
         ],
       },
       {
