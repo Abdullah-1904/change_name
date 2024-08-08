@@ -20,47 +20,36 @@ const Login = () => {
   };
   return (
     <div>
-      {alert && (
-        <div
-          class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
-          role="alert"
-        >
-          <strong className="font-bold mx-5">Incorrect Credentials!</strong>
-          <span className="mx-2block sm:inline">
-            Please Enter Correct Email or Password.
-          </span>
-          <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-            <svg
-              class="fill-current h-6 w-6 text-red-500"
-              role="button"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <title>Close</title>
-              <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
-            </svg>
-          </span>
-        </div>
-      )}
-
       <div>
         <div
           className="border bg-cover flex flex-col items-center min-h-dvh "
           style={{ backgroundImage: `url('background.jpg')` }}
         >
+          {alert && (
+            <div
+              class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 mt-2 rounded fixed z-10"
+              role="alert"
+            >
+              <strong className="font-bold mx-5">Incorrect Credentials!</strong>
+              <span className="mx-2block sm:inline">
+                Please Enter Correct Email or Password.
+              </span>
+            </div>
+          )}
+
           <form action="" onSubmit={submit}>
-            <div className="pb-4 flex flex-col bg-gradient-to-r from-transparent to-slate-50 mt-32 lg:w-80 px-10">
+            <div className="py-10 px-5 flex flex-col bg-white  bg-opacity-60 border border-green-100  mt-32 w-96 ">
               <label
                 htmlFor=""
-                className="flex justify-center text-2xl text-white mb-5"
+                className="flex justify-center text-3xl font-bold text-amber-400 mb-5"
               >
                 Concave Agri
               </label>
               <label
-                className="flex text-base text-black mb-2 justify-start"
+                className="flex mb-2 justify-start text-xl font-semibold text-green-400"
                 htmlFor=""
               >
-                Welcome to Concave Farming!
+                Welcome to Concave Farm!
               </label>
               <label
                 className="flex text-xs text-black mb-5 justify-start"
@@ -69,21 +58,22 @@ const Login = () => {
                 Please sign-in to access your account
               </label>
               <label
-                className=" flex justify-start text-xs mb-2 font-semibold"
+                className=" flex justify-start text-md mb-2 font-semibold"
                 htmlFor=""
               >
                 EMAIL
               </label>
               <input
+                placeholder="  example@example.com"
                 type="email"
-                className="border rounded-md mb-4"
+                className="border rounded-2xl  mb-4 py-1"
                 onChange={(a) => {
                   setEmail(a.target.value);
                 }}
               />
-              <div className="flex justify-between">
+              <div className="flex justify-between mt-2">
                 <label
-                  className="flex justify-start text-xs mb-2 font-semibold"
+                  className="flex justify-start text-md mb-2 font-semibold"
                   htmlFor=""
                 >
                   PASSWORD
@@ -93,17 +83,18 @@ const Login = () => {
                 </label>
               </div>
               <input
+                placeholder="  4x2Bd20"
                 type="password"
-                className="border rounded-md mb-4"
+                className="border rounded-2xl  mb-4 py-1"
                 onChange={(a) => {
                   setPassword(a.target.value);
                 }}
               />
               <button
                 type="submit"
-                className="border border-black rounded-md bg-transparent w-auto"
+                className="border bg-sky-100  rounded-xl w-auto hover:bg-sky-200 py-2 mt-3"
               >
-                Submit
+                SUBMIT
               </button>
             </div>
           </form>
