@@ -12,10 +12,14 @@ import {
   UserRoundPenIcon,
   Warehouse,
 } from "lucide-react";
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
+import { UserEmail } from "../../context/emailcontext";
 
 const Home = () => {
+  const { storeEmail } = useContext(UserEmail);
+  // UseContext Step 4
+
   return (
     <div>
       <div className="flex justify">
@@ -43,9 +47,7 @@ const Home = () => {
             <NavLink
               to="dashboard"
               className={({ isActive }) =>
-                `flex flex-row  ${
-                  isActive ? "bg-lime-300 font-bold rounded-s-2xl" : ""
-                }`
+                `flex flex-row  ${isActive ? "bg-lime-300  rounded-s-2xl" : ""}`
               }
             >
               <div className="flex flex-row my-3">
@@ -58,9 +60,7 @@ const Home = () => {
             <NavLink
               to="task"
               className={({ isActive }) =>
-                `flex flex-row  ${
-                  isActive ? "bg-lime-300 font-bold rounded-s-2xl" : ""
-                }`
+                `flex flex-row  ${isActive ? "bg-lime-300 rounded-s-2xl" : ""}`
               }
             >
               <div className="flex flex-row my-3">
@@ -197,9 +197,11 @@ const Home = () => {
                     <img src="user.jpg" alt="" className="w-10 rounded-3xl " />
                   </div>
                   <div className="flex flex-row">
-                    <div className="ml-10 mt-1">user email</div>
+                    <div className="ml-10 mt-1">{storeEmail?.email}</div>
                     <div className="ml-16 mt-1">
-                      <ChevronRight />
+                      <Link to={"/"}>
+                        <ChevronRight />
+                      </Link>
                     </div>
                   </div>
                 </div>

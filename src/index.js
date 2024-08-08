@@ -9,6 +9,7 @@ import Login from "./pages/login/login";
 import Signup from "./pages/signup/signup";
 import Task from "./pages/task/task";
 import Dashboard from "./pages/dashboard/dashboard";
+import { UserEmail, UserEmailProvider } from "./context/emailcontext";
 
 // in the homepage, this will be child of dashboard in the outlet in home.jsx
 // const Dashboard = () => <div>Dashboard Content</div>;
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <UserEmailProvider>
+      <RouterProvider router={router} />
+    </UserEmailProvider>
   </React.StrictMode>
 );
+
+// UseContext Step 2

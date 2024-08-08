@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserEmail } from "../../context/emailcontext";
 
 const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [alert, setAlert] = useState(false);
 
+  const { setstoreEmail } = useContext(UserEmail);
+  // UseContext Step 3
+
   const navi = useNavigate();
   const submit = (e) => {
     e.preventDefault(); // new thing i leaned. This will prevent my page to refresh untill the below statements are executed
     if (email === "a@gmail.com" && password === "123") {
       navi("/home");
+      setstoreEmail({ email });
     } else {
       setAlert(true);
       setTimeout(() => {
